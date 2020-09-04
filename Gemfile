@@ -1,6 +1,8 @@
-source "https://rubygems.org"
+# frozen_string_literal: true
 
-gem "allure-cucumber"
-gem "appium_lib"
-gem "cucumber"
-gem "rspec"
+source 'https://rubygems.org'
+
+gem 'allure-cucumber'
+gem 'appium_lib'
+gem 'cucumber'
+gem 'rspec'

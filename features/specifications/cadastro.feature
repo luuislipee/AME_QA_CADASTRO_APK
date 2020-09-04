@@ -24,4 +24,11 @@ Funcionalidade: Cadastro de Cliente
     |  "cadastro"  |
 
   @update_user
-  Cenario: Atualizar Usuario
+  Esquema do Cenario: Atualizar Usuario
+    Dado que eu tenho um usuário cadastrado com os <dados> preenchidos
+    Quando eu atualizo os dados desse usuário
+    Então ele deve ser atualizado
+
+    Exemplos:
+    |    dados     |
+    |  "cadastro"  |

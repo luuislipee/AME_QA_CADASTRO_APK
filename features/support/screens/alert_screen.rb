@@ -7,6 +7,7 @@ class AlertScreen
 
   def click_ok
     find_element(xpath: '//android.widget.Button[@text="OK"]').click
+    sleep 3
   end
 
   def confirm_deletion

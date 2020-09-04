@@ -35,4 +35,12 @@ class Cadastro
   def go_back
     @driver.back
   end
+
+  def delete_user
+    find_element(id: 'btnExcluir').click
+  end
+
+  def atualiza(dados)
+    find_element(id: 'editTelefone1').send_keys dados['novo_celular']
+  end
 end

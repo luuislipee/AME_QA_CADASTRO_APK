@@ -38,6 +38,18 @@ Quando('eu excluo esse usuário') do
 end
 
 Então('ele deve sumir da lista') do
-  expect(@list.contains_user).to be false
+  expect(@list.validate_deletion).to eql('Cadastro excluído com sucesso')
 end
+
 # --------------- UPDATE USER -------------------
+
+Quando('eu atualizo os dados desse usuário') do
+  @cadastro.atualiza(@user_data)
+  @cadastro.salva
+end
+
+Então('ele deve ser atualizado') do
+  expect(@alert.notification_text).to eql('Cadastro atualizado com sucesso')
+  @alert.click_ok
+  @cadastro.go_back
+end

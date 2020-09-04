@@ -9,7 +9,7 @@ class ListScreen
     find_element(id: 'nomeLista', text: user).click
   end
 
-  def user_on_list
-    find_element(id: 'nomeLista', text: user)
+  def validate_deletion
+    find_element(xpath: '//android.widget.Toast').text
   end
 end
