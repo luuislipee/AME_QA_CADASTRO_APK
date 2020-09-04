@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Before do
+  @cadastro = Cadastro.new
+  @alert = AlertScreen.new
+  @list = ListScreen.new
+
   driver.start_driver
   driver.manage.timeouts.implicit_wait = 10
   @file = YAML.load_file(File.join(Dir.pwd, 'features/support/fixtures/dados.yaml'))

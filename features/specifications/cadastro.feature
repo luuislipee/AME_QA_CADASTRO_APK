@@ -1,6 +1,8 @@
 #language: pt
 
 Funcionalidade: Cadastro de Cliente
+
+  @new_user
   Esquema do Cenario: Criar novo usuario
     Dado que eu sou preciso cadastrar um novo usuário
     Quando eu preencho os <dados> básicos necessários e salvo
@@ -10,6 +12,16 @@ Funcionalidade: Cadastro de Cliente
     |    dados     |
     |  "cadastro"  |
 
-  Cenario: Excluir Usuario
 
-  Cenario: Exportar Dados
+  @delete_user
+  Esquema do Cenario: Excluir Usuario
+    Dado que eu tenho um usuário cadastrado com os <dados> preenchidos
+    Quando eu excluo esse usuário
+    Então ele deve sumir da lista
+
+    Exemplos:
+    |    dados     |
+    |  "cadastro"  |
+
+  @update_user
+  Cenario: Atualizar Usuario
