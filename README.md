@@ -39,6 +39,9 @@ sudo apt-get update
 sudo apt-get install allure
 `
 
+#### Mais infos em
+* https://docs.qameta.io/allure/#_installing_a_commandline
+
 ### Executar localmente (minha maquina)
 `
 bundle exec cucumber
